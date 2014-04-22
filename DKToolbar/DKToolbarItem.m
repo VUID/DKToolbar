@@ -35,6 +35,8 @@
     self = [super initWithFrame:CGRectMake(0, 0, 50, 50)];
     
     if (self) {
+		self.defaultImage = image;
+		self.selectedImage = selectedImage;
         
         self.backgroundColor = [UIColor blackColor];
         
@@ -46,8 +48,8 @@
         CGRect buttonFrame = CGRectMake(3, 3, self.frame.size.width, 30);
         [_button setFrame:buttonFrame];
         [_button.imageView setContentMode:UIViewContentModeScaleAspectFill];
-        [_button setImage:image forState:UIControlStateNormal];
-        [_button setImage:selectedImage forState:UIControlStateHighlighted];
+        //[_button setImage:_defaultImage forState:UIControlStateNormal];
+        //[_button setImage:_selectedImage forState:UIControlStateHighlighted];
         [_button setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin];
         [_button setHitTestEdgeInsets:UIEdgeInsetsMake(-10, -10, -10, -10)];
         [self addSubview:_button];
