@@ -26,6 +26,12 @@
 #import "DKToolbar.h"
 #import "DKToolbarItem.h"
 
+@interface DKToolbar()
+
+@property (nonatomic, assign) NSUInteger currentIndex;
+
+@end
+
 @implementation DKToolbar
 
 - (id)initInView:(UIView *)view withDelegate:( id <DKToolbarDelegate> )delegate
@@ -88,6 +94,11 @@
         
         i ++;
     }
+	
+	
+	
+	if (_currentIndex) [self selectButton:((DKToolbarItem *)[_items objectAtIndex:_currentIndex]).button];
+	else [self selectButton:((DKToolbarItem *)[_items objectAtIndex:0]).button];
 }
 
 
@@ -102,6 +113,8 @@
         }
         index ++;
     }
+	
+	if (_radioSelection) [self selectButton:senderButton];
     
     [_delegate toolbarItemClickedAtIndex:index];
 }
@@ -114,6 +127,25 @@
     for (DKToolbarItem *item in self.items) {
         item.backgroundColor = itemBackgroundColor;
     }
+}
+
+- (void)selectButton:(UIButton *)button
+{
+    [_items enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        DKToolbarItem *item = (DKToolbarItem *)obj;
+        if (!item.selectedImage && !item.defaultImage) return;
+		if(button == item.button && item.selectedImage) {
+			[item.button setImage:item.selectedImage forState:UIControlStateNormal];
+			[item.button setImage:item.selectedImage forState:UIControlStateHighlighted];
+			[item.button setImage:item.selectedImage forState:UIControlStateSelected];
+			if (_itemSelectedBackgroundColor)[item setBackgroundColor:_itemSelectedBackgroundColor];
+        } else {
+			[item.button setImage:item.defaultImage forState:UIControlStateNormal];
+			[item.button setImage:item.defaultImage forState:UIControlStateHighlighted];
+			[item.button setImage:item.defaultImage forState:UIControlStateSelected];
+			if (_itemBackgroundColor)[item setBackgroundColor:_itemBackgroundColor];
+        }
+    }];
 }
 
 
