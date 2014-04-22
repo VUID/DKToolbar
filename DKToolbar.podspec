@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
                    DESC
   s.homepage     = "https://github.com/wzbozon/DKToolbar.git"
   # s.screenshots  = "https://github.com/wzbozon/DKToolbar/ScreenShots/DKToolbar_horizontal.png", "https://github.com/wzbozon/DKToolbar/ScreenShots/DKToolbar_vertical.png"
-  s.license      = { :type => 'MIT', :file => 'FILE_LICENSE' }
+  s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author             = { "Denis Kutlubaev" => "kutlubaev.denis@gmail.com" }
   s.social_media_url = "http://twitter.com/wzbozon"
   s.platform     = :ios, '5.1.1'
