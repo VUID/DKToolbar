@@ -29,8 +29,8 @@
 
 @property (nonatomic, strong) UIButton *button;
 @property (nonatomic, strong) UILabel *label;
-@property (nonatomic,strong) UIImage *defaultImage;
-@property (nonatomic,strong) UIImage *selectedImage;
+@property (nonatomic, strong) UIImage *defaultImage;
+@property (nonatomic, strong) UIImage *selectedImage;
 @property (nonatomic) BOOL enabled;
 
 - (id)initWithTitle:(NSString *)title image:(UIImage *)image selectedImage:(UIImage *)selectedImage height:(CGFloat)height;
