@@ -58,6 +58,8 @@
 @property (nonatomic, strong) UIColor *itemBackgroundColor;
 @property (nonatomic, strong) UIColor *itemSelectedBackgroundColor;
 @property (nonatomic) BOOL radioSelection;
+@property (nonatomic, assign) NSUInteger currentIndex;
+
 
 // Creates and adds a toolbar as a subview to your view. It calculates all frames automatically.
 - (id)initInView:(UIView *)view withDelegate:( id <DKToolbarDelegate> )delegate;

@@ -28,8 +28,6 @@
 
 @interface DKToolbar()
 
-@property (nonatomic, assign) NSUInteger currentIndex;
-
 @end
 
 @implementation DKToolbar
@@ -148,6 +146,5 @@
         }
     }];
 }
-
 
 @end
