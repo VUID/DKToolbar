@@ -32,7 +32,7 @@
 
 - (id)initWithTitle:(NSString *)title image:(UIImage *)image selectedImage:(UIImage *)selectedImage
 {
-    self = [super initWithFrame:CGRectMake(0, 0, 50, 50)];
+    self = [super initWithFrame:CGRectMake(0, 0, 50, 44)];
     
     if (self) {
 		self.defaultImage = image;

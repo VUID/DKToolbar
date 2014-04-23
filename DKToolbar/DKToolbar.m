@@ -37,7 +37,7 @@
     NSAssert(view != nil, @"%@: View cannot be nil", [self class]);
     NSAssert(delegate != nil, @"%@: Delegate cannot be nil", [self class]);
     
-    CGFloat toolbarHeight = 50.0;
+    CGFloat toolbarHeight = 44.0;
     
     self = [super initWithFrame:CGRectMake(0, view.bounds.size.height - toolbarHeight, view.bounds.size.width, toolbarHeight)];
     
@@ -75,7 +75,7 @@
     }
     
     CGFloat dividerWidth = 1.0;
-    CGFloat toolbarHeight = 50.0;
+    CGFloat toolbarHeight = 44.0;
     int numberOfItems = (int)[self.items count];
     int numberOfDividers = numberOfItems - 1;
     CGFloat itemHeight = toolbarHeight;
