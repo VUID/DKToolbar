@@ -58,6 +58,7 @@
 @property (nonatomic, strong) UIColor *itemLabelSelectedColor;
 @property (nonatomic) BOOL radioSelection;
 @property (nonatomic, assign) NSUInteger currentIndex;
+@property (nonatomic, assign) CGFloat toolbarHeight;
 
 
 // Creates and adds a toolbar as a subview to your view. It calculates all frames automatically.

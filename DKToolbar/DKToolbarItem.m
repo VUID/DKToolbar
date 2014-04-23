@@ -30,9 +30,9 @@
 @implementation DKToolbarItem
 
 
-- (id)initWithTitle:(NSString *)title image:(UIImage *)image selectedImage:(UIImage *)selectedImage
+- (id)initWithTitle:(NSString *)title image:(UIImage *)image selectedImage:(UIImage *)selectedImage height:(CGFloat)height
 {
-    self = [super initWithFrame:CGRectMake(0, 0, 50, 44)];
+    self = [super initWithFrame:CGRectMake(0, 0, 50, height)];
     
     if (self) {
 		self.defaultImage = image;

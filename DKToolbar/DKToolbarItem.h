@@ -33,6 +33,6 @@
 @property (nonatomic,strong) UIImage *selectedImage;
 @property (nonatomic) BOOL enabled;
 
-- (id)initWithTitle:(NSString *)title image:(UIImage *)image selectedImage:(UIImage *)selectedImage;
+- (id)initWithTitle:(NSString *)title image:(UIImage *)image selectedImage:(UIImage *)selectedImage height:(CGFloat)height;
 
 @end
