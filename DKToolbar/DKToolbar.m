@@ -114,6 +114,7 @@
         index ++;
     }
 	
+	_currentIndex = index;
 	if (_radioSelection) [self selectButton:senderButton];
     
     [_delegate toolbarItemClickedAtIndex:index];
