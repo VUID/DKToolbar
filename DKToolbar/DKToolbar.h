@@ -48,12 +48,9 @@
 @end
 
 
-@interface DKToolbar : UIView {
-    
-    id <DKToolbarDelegate> _delegate;
-    
-}
+@interface DKToolbar : UIView
 
+@property (nonatomic, strong) id<DKToolbarDelegate> delegate;
 @property (nonatomic, strong) NSArray *items;
 @property (nonatomic, strong) UIColor *itemBackgroundColor;
 @property (nonatomic, strong) UIColor *itemSelectedBackgroundColor;
