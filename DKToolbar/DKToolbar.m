@@ -138,11 +138,13 @@
 			[item.button setImage:item.selectedImage forState:UIControlStateHighlighted];
 			[item.button setImage:item.selectedImage forState:UIControlStateSelected];
 			if (_itemSelectedBackgroundColor)[item setBackgroundColor:_itemSelectedBackgroundColor];
+			if (_itemLabelSelectedColor)[item.label setTextColor:_itemLabelSelectedColor];
         } else {
 			[item.button setImage:item.defaultImage forState:UIControlStateNormal];
 			[item.button setImage:item.defaultImage forState:UIControlStateHighlighted];
 			[item.button setImage:item.defaultImage forState:UIControlStateSelected];
 			if (_itemBackgroundColor)[item setBackgroundColor:_itemBackgroundColor];
+			if (_itemLabelColor)[item.label setTextColor:_itemLabelColor];
         }
     }];
 }

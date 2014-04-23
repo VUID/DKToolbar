@@ -57,6 +57,8 @@
 @property (nonatomic, strong) NSArray *items;
 @property (nonatomic, strong) UIColor *itemBackgroundColor;
 @property (nonatomic, strong) UIColor *itemSelectedBackgroundColor;
+@property (nonatomic, strong) UIColor *itemLabelColor;
+@property (nonatomic, strong) UIColor *itemLabelSelectedColor;
 @property (nonatomic) BOOL radioSelection;
 @property (nonatomic, assign) NSUInteger currentIndex;
 
