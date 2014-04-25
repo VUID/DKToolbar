@@ -47,7 +47,7 @@
         _button = [UIButton buttonWithType:UIButtonTypeCustom];
         CGRect buttonFrame = CGRectMake(3, 3, self.frame.size.width, height-20);
         [_button setFrame:buttonFrame];
-        [_button.imageView setContentMode:UIViewContentModeScaleAspectFill];
+        [_button.imageView setContentMode:UIViewContentModeScaleAspectFit];
         //[_button setImage:_defaultImage forState:UIControlStateNormal];
         //[_button setImage:_selectedImage forState:UIControlStateHighlighted];
         [_button setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin];
