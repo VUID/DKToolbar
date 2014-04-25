@@ -146,16 +146,16 @@ typedef enum ToolbarItems {
     
     // Create and add items to the toolbar
     // If selectedImage is nil, button icon will just become gray, when highlighted
-    DKToolbarItem *toolbarItem0 = [[DKToolbarItem alloc] initWithTitle:@"Response" image:[UIImage imageNamed:@"VacancyToolbarIconResponse"] selectedImage:nil];
+    DKToolbarItem *toolbarItem0 = [[DKToolbarItem alloc] initWithTitle:@"Response" image:[UIImage imageNamed:@"VacancyToolbarIconResponse"] selectedImage:nil height:50.0];
     
-    DKToolbarItem *toolbarItem1 = [[DKToolbarItem alloc] initWithTitle:@"No resume" image:[UIImage imageNamed:@"VacancyToolbarIconNoResumeResponse"] selectedImage:nil];
+    DKToolbarItem *toolbarItem1 = [[DKToolbarItem alloc] initWithTitle:@"No resume" image:[UIImage imageNamed:@"VacancyToolbarIconNoResumeResponse"] selectedImage:nil height:50.0];
 
     // You can disable any button by accessing toolbar items directly.
     toolbarItem1.button.enabled = NO;
     
-    DKToolbarItem *toolbarItem2 = [[DKToolbarItem alloc] initWithTitle:@"Call" image:[UIImage imageNamed:@"VacancyToolbarIconPhoneCall"] selectedImage:nil];
+    DKToolbarItem *toolbarItem2 = [[DKToolbarItem alloc] initWithTitle:@"Call" image:[UIImage imageNamed:@"VacancyToolbarIconPhoneCall"] selectedImage:nil height:50.0];
     
-    DKToolbarItem *toolbarItem3 = [[DKToolbarItem alloc] initWithTitle:@"To contacts" image:[UIImage imageNamed:@"VacancyToolbarIconAddContact"] selectedImage:nil];
+    DKToolbarItem *toolbarItem3 = [[DKToolbarItem alloc] initWithTitle:@"To contacts" image:[UIImage imageNamed:@"VacancyToolbarIconAddContact"] selectedImage:nil height:50.0];
     
     // This is just for testing different number of items in a toolbar. You should remove NumberOfItems parameter in your realisation.
     if (numberOfItems == 2) {

@@ -45,7 +45,7 @@
         [self setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleWidth];
         
         _button = [UIButton buttonWithType:UIButtonTypeCustom];
-        CGRect buttonFrame = CGRectMake(3, 3, self.frame.size.width, height-20);
+        CGRect buttonFrame = CGRectMake(3, 3, self.frame.size.width, height-([title isEqual:nil]?20:0));
         [_button setFrame:buttonFrame];
         [_button.imageView setContentMode:UIViewContentModeScaleAspectFit];
         //[_button setImage:_defaultImage forState:UIControlStateNormal];
@@ -54,15 +54,17 @@
         [_button setHitTestEdgeInsets:UIEdgeInsetsMake(-10, -10, -10, -10)];
         [self addSubview:_button];
         
-        CGRect labelFrame = CGRectMake(3, self.frame.size.height - 20, self.frame.size.width - 6, 20);
-        _label = [[UILabel alloc] initWithFrame:labelFrame];
-        _label.backgroundColor = [UIColor clearColor];
-        _label.textAlignment = NSTextAlignmentCenter;
-        [_label setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleWidth];
-        _label.font = [UIFont systemFontOfSize:10];
-        _label.textColor = [UIColor whiteColor];
-        _label.text = title;
-        [self addSubview:_label];
+		if (![title isEqual:nil]) {
+			CGRect labelFrame = CGRectMake(3, self.frame.size.height - 20, self.frame.size.width - 6, 20);
+			_label = [[UILabel alloc] initWithFrame:labelFrame];
+			_label.backgroundColor = [UIColor clearColor];
+			_label.textAlignment = NSTextAlignmentCenter;
+			[_label setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleWidth];
+			_label.font = [UIFont systemFontOfSize:10];
+			_label.textColor = [UIColor whiteColor];
+			_label.text = title;
+			[self addSubview:_label];
+		}
     }
     
     return self;
